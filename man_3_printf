@@ -1,0 +1,40 @@
+.TH _PRINTF (4.0) "March 2022" "0.1" "Holberton School 0x10. C - _printf"
+
+.SH NAME
+_printf \- The functions produce output according to
+       a format as described below.
+       
+.SH SYNOPSIS
+.B printf
+[\f%\fR][\fR conversion\fR]
+
+.SH DESCRIPTION
+.B _printf
+Produce and output according to a valid format.
+
+.SH FORMATS
+
+.TP
+.BR \-s ", " 
+ Used to display string variable. If no l modifier is present: the const char * argument is
+ expected to be a pointer to an array of character type (pointer to a string).  Characters 
+ from the array are written up to (but not including) a terminating null byte ('\0')
+
+.TP		 
+.BR \-c ", " 
+ Used to display character. If no l modifier is present, the int argument is converted
+ to an unsigned char, and the resulting character is written. 
+
+.TP
+.BR \-d , i ", " 
+:xed to display integers. The int argument is converted to signed decimal notation.
+The precision, if any, gives the minimum number of digits that must appear; 
+if the converted value requires few digits, it is padded on the left with zeros. 
+The default precision is 1.  When 0 is printed with an explicit precision 0, 
+the output is empty.
+
+.SH SEE ALSO
+printf(3)
+
+.SH AUTHOR
+Frank Quispe and Leslie Paz
